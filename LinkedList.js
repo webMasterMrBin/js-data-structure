@@ -63,7 +63,7 @@ class LinkedList {
 
   // 给定的位置插入一个元素
   insert = (position, element) => {
-    if (position < this.length) {
+    if (position <= this.length) {
       let current = this.head;
       let previous;
       let index = 0;
@@ -81,6 +81,8 @@ class LinkedList {
         previous.next = node;
         node.next = current;
       }
+
+      this.length++;
     }
   };
 
